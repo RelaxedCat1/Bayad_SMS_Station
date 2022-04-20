@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "911567280915",
+    "project_id": "bayad-d32a4",
+    "storage_bucket": "bayad-d32a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911567280915:android:ccde6b705042a3dd43d8e6",
+        "android_client_info": {
+          "package_name": "com.edwardmolina.bayadmatthew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911567280915-crmi6f1bckveug8nbi3ug5co2lr38tt9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOm5taNnZpZoaZe29kJRo9jxMtAoHCEIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911567280915-crmi6f1bckveug8nbi3ug5co2lr38tt9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "911567280915-3ks4jo345boaihrntgl8j6dkkmdn8gfj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bayadmatthew"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911567280915:android:2a0dedd61969119a43d8e6",
+        "android_client_info": {
+          "package_name": "com.example.bayad_sms_station"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911567280915-crmi6f1bckveug8nbi3ug5co2lr38tt9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOm5taNnZpZoaZe29kJRo9jxMtAoHCEIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911567280915-crmi6f1bckveug8nbi3ug5co2lr38tt9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "911567280915-3ks4jo345boaihrntgl8j6dkkmdn8gfj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bayadmatthew"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
