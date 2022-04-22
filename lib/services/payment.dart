@@ -27,18 +27,21 @@ class PaymentService {
       value: senderPhoneNumber,
     ) as List<QueryDocumentSnapshot<Map<String, dynamic>>>?;
 
-    if (_sender == null) {
-      sendMessageError(
-        senderPhoneNumber,
-        'Error! You are not a registered user',
-      );
-      return;
-    }
-    if (_receiver == null) {
-      sendMessageError(
-        senderPhoneNumber,
-        'Error! The user you are sending cannot be found',
-      );
+    if (_sender == null || _receiver == null) {
+      if (_receiver == null) {
+        sendMessageError(
+          senderPhoneNumber,
+          'Error! The user you are sending money to cannot be found. Please check the phone number including the country code and try again. (Ex. +639123456789)',
+        );
+      }
+
+      if (_sender == null) {
+        sendMessageError(
+          senderPhoneNumber,
+          'Error! You are not a registered user of the Bayad System. Please use a registered phone number or sign up for an account.',
+        );
+      }
+
       return;
     }
 
@@ -67,7 +70,7 @@ class PaymentService {
         if (walletBalance < amount) {
           sendMessageError(
             senderPhoneNumber,
-            'Sorry, Your Balance is insufficient. Currently it is P$walletBalance',
+            'Sorry, Your Balance is insufficient. Currently it is $walletBalance PHP',
           );
           return;
         }
@@ -81,7 +84,8 @@ class PaymentService {
             .update(_receiverWallet, {'walletBalance': receiverAddedBalance});
         telephony.sendSms(
           to: senderPhoneNumber,
-          message: 'Successfully sent $amount',
+          message:
+              'You have successfully sent $amount PHP to $receiverPhoneNumber. Your available balance is $userNewBalance PHP.}',
         );
       });
     } on FirebaseException catch (error) {
