@@ -15,16 +15,10 @@ void smsSendTransaction(SmsMessage message) {
     if (messageResult.length == 3) {
       receiverPhoneNumber = messageResult[2];
       amount = num.parse(messageResult[1]!);
-
       PaymentService().sendMoneyViaSMS(
         senderPhoneNumber: senderPhoneNumber!,
         receiverPhoneNumber: receiverPhoneNumber,
         amount: amount,
-      );
-
-      telephony.sendSms(
-        to: senderPhoneNumber,
-        message: '${message.address} $receiverPhoneNumber $amount',
       );
     } else {
       telephony.sendSms(to: senderPhoneNumber!, message: messageError);
